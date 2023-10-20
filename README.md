@@ -4,27 +4,31 @@ Nothing to see here, just a blog.
 
 ## Visit the blog
 
-Github Pages
+### [Github Pages](https://github.com/Dongshan-git/blog/settings/pages)
 
-[https://dongshan-git.github.io/blog/](https://dongshan-git.github.io/blog/)
+[https://github,dscode.top/](https://github,dscode.top/)
 
-Vercel
+### [Vercel](https://vercel.com/dashboard)
 
-[https://blog-iota-lake-12.vercel.app/](https://blog-iota-lake-12.vercel.app/)
+[https://vercel.dscode.top/](https://vercel.dscode.top/)
 
-Cloudflare Pages
+### [Cloudflare Pages](https://dash.cloudflare.com/)
 
-[https://blog-vui.pages.dev/](https://blog-vui.pages.dev/)
+[https://cloudflare.dscode.top/](https://cloudflare.dscode.top/)
 
 ## Deploy bug fix
 
-[issue 742](https://github.com/peaceiris/actions-gh-pages/issues/742) of the [`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages) GitHub Action [mentions](https://github.com/peaceiris/actions-gh-pages/issues/742#issuecomment-1114440714):
+[issue 742](https://github.com/peaceiris/actions-gh-pages/issues/742) of
+the [`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages) GitHub
+Action [mentions](https://github.com/peaceiris/actions-gh-pages/issues/742#issuecomment-1114440714):
 
-> I had to change these settings under [Settings-Action-General](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#managing-github-actions-permissions-for-your-repository).  
+> I had to change these settings
+>
+under [Settings-Action-General](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#managing-github-actions-permissions-for-your-repository).
 > Maybe worth calling out in docs:
 >
-> *   Workflow Permissions: Read (sic) and Write
-> *   Allow GitHub Actions to approve pull requests
+> * Workflow Permissions: Read (sic) and Write
+> * Allow GitHub Actions to approve pull requests
 
 * * *
 
@@ -36,7 +40,6 @@ Which lead to [PR 383](https://github.com/peaceiris/actions-gh-pages/pull/383/fi
 
 > The generated `GITHUB_TOKEN` (github\_token) does not support to push to an external repository.  
 > Use deploy\_key or personal\_token.
-
 
 ### Installation
 
