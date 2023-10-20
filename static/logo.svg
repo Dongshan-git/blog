@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1600" viewBox="0 0 1600 1600">
+  <defs>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_11">
+      <rect width="1600" height="1600"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_11" data-name="iPhone X/XS/11 Pro – 11" clip-path="url(#clip-iPhone_X_XS_11_Pro_11)">
+    <rect width="1600" height="1600" fill="rgba(255,255,255,0)"/>
+    <circle id="椭圆_57" data-name="椭圆 57" cx="800" cy="800" r="800" fill="#fff"/>
+    <text id="DS" transform="translate(233 1150)" fill="#006caf" font-size="1000" font-family="JetBrainsMono-Regular, JetBrains Mono"><tspan x="0" y="0" text-decoration="underline">D</tspan><tspan y="0" fill="#23a8f2" font-family="JetBrainsMono-Bold, JetBrains Mono" font-weight="700">S</tspan></text>
+  </g>
+</svg>

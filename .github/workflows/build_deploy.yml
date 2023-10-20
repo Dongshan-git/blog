@@ -1,0 +1,31 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@master
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - run: pnpm install
+      - run: pnpm build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: DsCodeStudio
+          user_email: DSCodeStudio@gmail.com
