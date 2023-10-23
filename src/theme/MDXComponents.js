@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 import ColorCode from '../components/ColorCode';
 import ColorPalette from '../components/ColorPalette';
 import ComponentsGrid from '../components/ComponentsGrid';
-import { Card, CardSection } from '../components/CardComponents';
+import { CardSection, Card } from '../components/CardComponents';
 import * as icons from '../icons';
 
 export default {

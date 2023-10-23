@@ -11,15 +11,15 @@ function webpackPlugin(context, options) {
             {
               test: /\.m?js/,
               resolve: {
-                fullySpecified: false
-              }
-            }
-          ]
+                fullySpecified: false,
+              },
+            },
+          ],
         },
         plugins: [
           new ProvidePlugin({
-            process: require.resolve('process/browser')
-          })
+            process: require.resolve('process/browser'),
+          }),
         ],
         resolve: {
           fallback: {
@@ -27,17 +27,17 @@ function webpackPlugin(context, options) {
             path: require.resolve('path-browserify'),
             buffer: require.resolve('buffer/'),
             url: require.resolve('url'),
-            crypto: false
+            crypto: false,
           },
           alias: {
-            process: 'process/browser.js'
-          }
-        }
+            process: 'process/browser.js',
+          },
+        },
       };
-    }
+    },
   };
 }
 
 module.exports = {
-  webpackPlugin
+  webpackPlugin,
 };

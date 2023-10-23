@@ -18,23 +18,50 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    url: '/blog',
+    url: '/',
     type: 'blog',
     title: 'Migrate to v2 REST API',
     description:
       'Excited to announce the release of our v2 REST APIs, which are faster, more idiomatic, and easier to use.',
-    image: '',
+    image:
+      'https://dyte.io/blog/content/images/size/w1000/2023/02/Dyte-Blog---v2-APIs.jpg',
     duration: '3 min',
   },
-
   {
-    url: '/blog',
+    url: 'https://dyte.io/blog/hls-in-depth/',
+    type: 'blog',
+    title: 'HLS in Depth',
+    description:
+      "HLS is widely adopted, simple, yet robust. Learn how it works from a client's perspective, its segments, features, and disadvantages.",
+    image:
+      'https://dyte.io/blog/content/images/size/w1000/2023/07/HLS--indepth--header--1.png',
+    duration: '10 min',
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=eVUqkNNHh1o',
     type: 'video',
     title: 'Integrating React UI Kit',
     description:
       'In this video learn how to use React UI Kit prebuilt components to add live video and audio to your React application.',
-    image: '',
+    image: 'https://img.youtube.com/vi/eVUqkNNHh1o/hqdefault.jpg',
     duration: '5 min',
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ZkrZc8Neh6A',
+    type: 'video',
+    title: 'Video KYC App using React UI Kit',
+    description:
+      'In this episode of Dyte Byte we show how to build Video KYC App using React UI Kit.',
+    image: 'https://img.youtube.com/vi/ZkrZc8Neh6A/hqdefault.jpg',
+    duration: '5 min',
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=UHuzWDxrvLk',
+    type: 'video',
+    title: 'Calling Dyte REST APIs',
+    description: 'Understand our HTTP REST APIs',
+    image: 'https://img.youtube.com/vi/UHuzWDxrvLk/hqdefault.jpg',
+    duration: '7 min',
   },
 ];
 
@@ -109,7 +136,7 @@ export default function ResourcesSection() {
             <h2 className="mb-6 text-4xl">Want to know more?</h2>
           </div>
           <Link
-            to="/blog"
+            to="https://dyte.io/blog"
             className="font-jakarta text-sm font-semibold text-primary"
           >
             All Blogs <ArrowRightFilled className="ml-1" />
@@ -121,7 +148,7 @@ export default function ResourcesSection() {
             className={clsx(
               'rounded-lg px-4 py-2 transition-colors',
               activeType === 'all' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black',
+                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
             )}
             onClick={() => setActiveType('all')}
           >
@@ -131,7 +158,7 @@ export default function ResourcesSection() {
             className={clsx(
               'rounded-lg px-4 py-2 transition-colors',
               activeType === 'blog' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black',
+                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
             )}
             onClick={() => setActiveType('blog')}
           >
@@ -141,7 +168,7 @@ export default function ResourcesSection() {
             className={clsx(
               'rounded-lg px-4 py-2 transition-colors',
               activeType === 'video' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black',
+                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
             )}
             onClick={() => setActiveType('video')}
           >

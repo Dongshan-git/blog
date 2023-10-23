@@ -1,32 +1,196 @@
-// @ts-check
-
 const code_themes = {
   light: require('prism-react-renderer').themes.github,
   dark: require('prism-react-renderer').themes.dracula,
 };
 
+/** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'DS Blog',
-  tagline: 'DS Blog',
-  favicon: '/favicon.ico',
-  url: 'https://www.dscode.top',
+  title: 'Dyte Docs',
+  tagline: 'Real-time audio & video SDKs, ready to launch 🚀',
+  url: 'https://docs.dyte.io',
   baseUrl: '/',
+  favicon: '/favicon.ico',
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 };
+
+/** @type {import('@docusaurus/plugin-content-docs').Options[]} */
+const docs = [
+  {
+    id: 'cli',
+    path: 'docs/cli',
+    routeBasePath: '/cli',
+  },
+  {
+    id: 'plugin-sdk',
+    path: 'docs/plugin-sdk',
+    routeBasePath: '/plugin-sdk',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+
+  // Community packages
+  {
+    id: 'community-packages',
+    path: 'docs/community-packages',
+    routeBasePath: '/community-packages',
+  },
+
+  // Web UI Kits
+  {
+    id: 'ui-kit',
+    path: 'docs/ui-kit',
+    routeBasePath: '/ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'react-ui-kit',
+    path: 'docs/react-ui-kit',
+    routeBasePath: '/react-ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'angular-ui-kit',
+    path: 'docs/angular-ui-kit',
+    routeBasePath: '/angular-ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+
+  // Web Core
+  {
+    id: 'web-core',
+    path: 'docs/web-core',
+    routeBasePath: '/web-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  // React Web Core
+  {
+    id: 'react-web-core',
+    path: 'docs/react-web-core',
+    routeBasePath: '/react-web-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+
+  // Mobile Core
+  {
+    id: 'android-core',
+    path: 'docs/android-core',
+    routeBasePath: '/android-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'flutter-core',
+    path: 'docs/flutter-core',
+    routeBasePath: '/flutter-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'ios-core',
+    path: 'docs/ios-core',
+    routeBasePath: '/ios-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'rn-core',
+    path: 'docs/rn-core',
+    routeBasePath: '/rn-core',
+    versions: {
+      current: {
+        label: '0.5.x',
+      },
+    },
+  },
+
+  // Mobile UI Kits
+  {
+    id: 'android',
+    path: 'docs/android',
+    routeBasePath: '/android',
+    versions: {
+      current: {
+        label: '0.14.x',
+      },
+    },
+  },
+  {
+    id: 'flutter',
+    path: 'docs/flutter',
+    routeBasePath: '/flutter',
+    versions: {
+      current: {
+        label: '0.7.x',
+      },
+    },
+  },
+  {
+    id: 'ios',
+    path: 'docs/ios',
+    routeBasePath: '/ios',
+    versions: {
+      current: {
+        label: '1.33.x',
+      },
+    },
+  },
+  {
+    id: 'react-native',
+    path: 'docs/rn-ui-kit',
+    routeBasePath: '/react-native',
+    versions: {
+      current: {
+        label: '1.4.x',
+      },
+    },
+  },
+];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
-  editUrl: 'https://github.com/Dongshan-git/blog/tree/main/',
+  editUrl: 'https://github.com/dyte-in/docs/tree/main/',
   showLastUpdateTime: true,
   sidebarCollapsible: true,
   remarkPlugins: [
     [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
   ],
-  sidebarPath: require.resolve('./sidebars.js'),
+  sidebarPath: require.resolve('./sidebars-default.js'),
 };
 
 /**
@@ -34,7 +198,7 @@ const defaultSettings = {
  * @param {import('@docusaurus/plugin-content-docs').Options} options
  */
 function create_doc_plugin({
-  sidebarPath = require.resolve('./sidebars.js'),
+  sidebarPath = require.resolve('./sidebars-default.js'),
   ...options
 }) {
   return [
@@ -50,39 +214,178 @@ function create_doc_plugin({
 
 const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
 const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
-
-const docs = [
-  {
-    id: 'react-web-core',
-    path: 'docs/react-web-core',
-    routeBasePath: '/react-web-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
-];
-
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
 const plugins = [
-  webpackPlugin,
-  ...docs_plugins,
   tailwindPlugin,
+  ...docs_plugins,
+  webpackPlugin,
   [
     '@docusaurus/plugin-client-redirects',
     {
       createRedirects(path) {
+        // if (path.startsWith('/web-core/livestreaming')) {
+        //   return [
+        //     path.replace(
+        //       '/web-core/livestreaming',
+        //       '/web-core/livestreaming/livestream-apis'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/rn-core/livestreaming')) {
+        //   return [
+        //     path.replace(
+        //       '/rn-core/livestreaming',
+        //       '/rn-core/livestreaming/livestream-apis'
+        //     ),
+        //   ];
+        // }
         // if (path.startsWith('/react-web-core/livestreaming')) {
         //   return [
         //     path.replace(
         //       '/react-web-core/livestreaming',
-        //       '/react-web-core/livestreaming/livestream-apis',
+        //       '/react-web-core/livestreaming/livestream-apis'
         //     ),
         //   ];
         // }
-
+        // if (path.startsWith('/web-core/stage')) {
+        //   return [
+        //     path.replace(
+        //       '/web-core/stage',
+        //       '/web-core/livestreaming/state-management-apis'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/rn-core/stage')) {
+        //   return [
+        //     path.replace(
+        //       '/rn-core/stage',
+        //       '/rn-core/livestreaming/state-management-apis'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/react-web-core/stage')) {
+        //   return [
+        //     path.replace(
+        //       '/react-web-core/stage',
+        //       '/react-web-core/livestreaming/state-management-apis'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/webhooks')) {
+        //   return [
+        //     path.replace('/guides/capabilities/webhooks', '/guides/webhooks'),
+        //     path.replace(
+        //       '/guides/capabilities/webhooks',
+        //       '/guides/features/webhooks'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/recording')) {
+        //   return [
+        //     path.replace('/guides/capabilities/recording', '/guides/recording'),
+        //     path.replace(
+        //       '/guides/capabilities/recording',
+        //       '/guides/features/recording'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/recording')) {
+        //   return [
+        //     path.replace('/guides/capabilities/recording', '/guides/recording'),
+        //     path.replace(
+        //       '/guides/capabilities/recording',
+        //       '/guides/features/recording'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/embed')) {
+        //   return [
+        //     path.replace('/guides/capabilities/embed', '/guides/embed'),
+        //     path.replace(
+        //       '/guides/capabilities/embed',
+        //       '/guides/features/embed'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/export-chat-dump')) {
+        //   return [
+        //     path.replace(
+        //       '/guides/capabilities/export-chat-dump',
+        //       '/guides/export-chat-dump'
+        //     ),
+        //     path.replace(
+        //       '/guides/capabilities/export-chat-dump',
+        //       '/guides/features/export-chat-dump'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/breakoutroom')) {
+        //   return [
+        //     path.replace(
+        //       '/guides/capabilities/breakoutroom',
+        //       '/guides/breakoutroom'
+        //     ),
+        //     path.replace(
+        //       '/guides/capabilities/breakoutroom',
+        //       '/guides/features/breakoutroom'
+        //     ),
+        //   ];
+        // }
+        // /* for everything else */
+        // if (path.startsWith('/guides/capabilities')) {
+        //   return [path.replace('/guides/capabilities', '/guides/features')];
+        // }
+        // if (path === '/ui-kit') {
+        //   return [
+        //     '/javascript/advanced-usage',
+        //     '/javascript/customize-meeting-ui',
+        //     '/javascript/events',
+        //     '/javascript/installation',
+        //     '/javascript/quickstart',
+        //     '/javascript/reference/chat-message',
+        //     '/javascript/reference/connection-config',
+        //     '/javascript/reference/dyte-client',
+        //     '/javascript/reference/dyte-control-bar',
+        //     '/javascript/reference/dyte-errors',
+        //     '/javascript/reference/dyte-grid',
+        //     '/javascript/reference/dyte-meeting-events',
+        //     '/javascript/reference/dyte-plugin',
+        //     '/javascript/reference/dyte-ui-config',
+        //     '/javascript/reference/meeting',
+        //     '/javascript/reference/participant',
+        //     '/javascript/reference/self-participant',
+        //     '/javascript/sample-app',
+        //     '/javascript/usage',
+        //     '/javascript/virtual-background',
+        //     '/javascript/',
+        //   ];
+        // }
+        // if (path === '/react-ui-kit') {
+        //   return [
+        //     '/react/advanced-usage',
+        //     '/react/customize-meeting-ui',
+        //     '/react/events',
+        //     '/react/installation',
+        //     '/react/quickstart',
+        //     '/react/reference/chat-message',
+        //     '/react/reference/connection-config',
+        //     '/react/reference/dyte-client',
+        //     '/react/reference/dyte-control-bar',
+        //     '/react/reference/dyte-errors',
+        //     '/react/reference/dyte-grid',
+        //     '/react/reference/dyte-meeting-events',
+        //     '/react/reference/dyte-plugin',
+        //     '/react/reference/dyte-ui-config',
+        //     '/react/reference/meeting',
+        //     '/react/reference/participant',
+        //     '/react/reference/self-participant',
+        //     '/react/sample-app',
+        //     '/react/usage',
+        //     '/react/virtual-background',
+        //     '/react/',
+        //   ];
+        // }
         return undefined; // Return a falsy value: no redirect created
       },
     },
@@ -97,35 +400,33 @@ const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 const config = {
   ...meta,
   plugins,
-  organizationName: 'DSCodeStudio',
-  projectName: 'ds-blog',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/Dongshan-git/blog/tree/main/',
-          // path: 'docs/react-web-core',
-          // routeBasePath: '/docs',
+          path: 'docs/guides',
+          id: 'guides',
+          routeBasePath: '/guides',
           ...defaultSettings,
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/Dongshan-git/blog/tree/main/',
-        },
+        blog: false,
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/api-reference.css'),
           ],
+        },
+        sitemap: {
+          ignorePatterns: ['/tags/**'],
+        },
+        googleTagManager: {
+          containerId: 'GTM-5FDFFSS',
         },
       }),
     ],
@@ -149,19 +450,16 @@ const config = {
           href: '/',
           src: '/logo/light.svg',
           srcDark: '/logo/dark.svg',
-          alt: 'DS Blog Logo',
+          alt: 'Dyte Docs',
           height: '40px',
           width: '101px',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            label: 'Guides',
+            to: 'guides',
             className: 'guides-top-header',
           },
-
           {
             label: 'SDKs',
             type: 'dropdown',
@@ -176,7 +474,7 @@ const config = {
           },
           {
             label: 'REST API',
-            to: '/blog',
+            to: '/web-core',
           },
           {
             label: 'Resources',
@@ -190,7 +488,10 @@ const config = {
               },
             ],
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            label: 'Support',
+            to: 'https://dyte.io/contact',
+          },
 
           {
             type: 'search',
@@ -198,13 +499,85 @@ const config = {
           },
           {
             label: 'Book a demo',
-            href: '/blog',
+            href: 'https://dyte.io/schedule-demo',
             position: 'right',
             className: 'navbar-book-demo',
           },
+          {
+            label: 'Sign Up',
+            href: 'https://dev.dyte.io/register',
+            position: 'right',
+            className: 'dev-portal-signup dev-portal-link',
+          },
         ],
       },
-
+      footer: {
+        logo: {
+          href: '/',
+          src: '/logo/light.svg',
+          srcDark: '/logo/dark.svg',
+          alt: 'Dyte Docs',
+          height: '36px',
+        },
+        links: [
+          {
+            title: 'Product',
+            items: [
+              {
+                label: 'Demo',
+                href: 'https://app.dyte.io',
+              },
+              {
+                label: 'Developer Portal',
+                href: 'https://dev.dyte.io',
+              },
+              {
+                label: 'Pricing',
+                href: 'https://dyte.io/#pricing',
+              },
+            ],
+          },
+          {
+            title: 'Company',
+            items: [
+              {
+                label: 'About Us',
+                href: 'https://dyte.io',
+              },
+              {
+                label: 'Join Us',
+                href: 'https://dyte.freshteam.com/jobs',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https://dyte.io/privacy-policy',
+              },
+              {
+                label: 'Contact Us',
+                href: 'https://dyte.io/contact',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'Documentation',
+                href: '/',
+              },
+              {
+                label: 'Blog',
+                href: 'https://dyte.io/blog',
+              },
+              {
+                label: 'Community',
+                href: 'https://community.dyte.io',
+              },
+            ],
+          },
+        ],
+        copyright: 'Copyright © Dyte since 2023. All rights reserved.',
+      },
       prism: {
         theme: code_themes.light,
         darkTheme: code_themes.dark,
@@ -237,6 +610,7 @@ const config = {
         searchParameters: {},
       },
     }),
+
   webpack: {
     jsLoader: (isServer) => ({
       loader: require.resolve('swc-loader'),
