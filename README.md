@@ -16,6 +16,10 @@ Nothing to see here, just a blog.
 
 [https://cloudflare.dscode.top/](https://cloudflare.dscode.top/)
 
+### [Zeabur](https://dash.zeabur.com/projects)
+
+[https://zeabur.dscode.top/](https://zeabur.dscode.top/)
+
 ## Deploy bug fix
 
 [issue 742](https://github.com/peaceiris/actions-gh-pages/issues/742) of
