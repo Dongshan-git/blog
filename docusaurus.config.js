@@ -415,7 +415,10 @@ const config = {
           routeBasePath: '/guides',
           ...defaultSettings,
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          editUrl: 'https://github.com/Dongshan-git/blog/tree/main/',
+        },
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
@@ -489,25 +492,13 @@ const config = {
             ],
           },
           {
-            label: 'Support',
-            to: 'https://dyte.io/contact',
+            label: 'Blog',
+            to: '/blog',
           },
 
           {
             type: 'search',
             position: 'right',
-          },
-          {
-            label: 'Book a demo',
-            href: 'https://dyte.io/schedule-demo',
-            position: 'right',
-            className: 'navbar-book-demo',
-          },
-          {
-            label: 'Sign Up',
-            href: 'https://dev.dyte.io/register',
-            position: 'right',
-            className: 'dev-portal-signup dev-portal-link',
           },
         ],
       },

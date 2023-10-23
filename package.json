@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@docsearch/react": "^3.5.2",
-    "@docsly/react": "^1.9.1",
     "@docusaurus/core": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@docusaurus/plugin-client-redirects": "^2.4.3",
