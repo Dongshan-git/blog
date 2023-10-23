@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[9197],{7912:r=>{r.exports=JSON.parse('{"label":"android-core","permalink":"/android-core/tags/android-core","allTagsPath":"/android-core/tags","count":1,"items":[{"id":"quickstart","title":"Quickstart","description":"Quickstart guide for android mobile core.","permalink":"/android-core/"}]}')}}]);

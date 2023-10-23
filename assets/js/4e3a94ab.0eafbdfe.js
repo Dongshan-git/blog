@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[7193],{7793:e=>{e.exports=JSON.parse('[{"label":"mobile-core","permalink":"/ios-core/tags/mobile-core","count":1},{"label":"quickstart","permalink":"/ios-core/tags/quickstart","count":1}]')}}]);

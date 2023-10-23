@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[5922],{2271:t=>{t.exports=JSON.parse('{"label":"quickstart","permalink":"/flutter-core/tags/quickstart","allTagsPath":"/flutter-core/tags","count":1,"items":[{"id":"quickstart","title":"Quickstart","description":"Quickstart guide for android mobile core.","permalink":"/flutter-core/"}]}')}}]);

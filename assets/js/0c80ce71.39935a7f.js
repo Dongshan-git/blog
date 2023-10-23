@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[8889],{6335:e=>{e.exports=JSON.parse('[{"label":"rn-core","permalink":"/rn-core/tags/rn-core","count":1},{"label":"installation","permalink":"/rn-core/tags/installation","count":1},{"label":"setup","permalink":"/rn-core/tags/setup","count":1}]')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[5484],{8371:s=>{s.exports=JSON.parse('{"label":"plugin-sdk","permalink":"/plugin-sdk/tags/plugin-sdk","allTagsPath":"/plugin-sdk/tags","count":1,"items":[{"id":"introduction","title":"Introduction","description":"","permalink":"/plugin-sdk/"}]}')}}]);
