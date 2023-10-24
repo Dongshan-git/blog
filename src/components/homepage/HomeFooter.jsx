@@ -58,6 +58,7 @@ function Links({ name, links }) {
       <div className="flex flex-col gap-3">
         {links.map(({ name, href }) => (
           <Link
+            key={name}
             href={href}
             className="text-base text-gray-700 hover:text-primary hover:no-underline"
           >
