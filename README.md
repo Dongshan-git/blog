@@ -6,7 +6,7 @@ Nothing to see here, just a blog.
 
 ### [Github Pages](https://github.com/Dongshan-git/blog/settings/pages)
 
-[https://github,dscode.top/](https://github,dscode.top/)
+[https://github.dscode.top/](https://github.dscode.top/)
 
 ### [Vercel](https://vercel.com/dashboard)
 
