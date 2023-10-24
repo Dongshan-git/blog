@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import * as Select from '@radix-ui/react-select';
 import clsx from 'clsx';
 import { Check, ChevronDown, ChevronUp } from 'react-feather';
-import './styles.module.css';
+import styles from './styles.module.css';
 
 const SectionsMenu = forwardRef(
   ({ defaultValue = '', values = [], children, className, ...props }, ref) => {
@@ -20,8 +20,12 @@ const SectionsMenu = forwardRef(
 
         <Select.Content
           position="popper"
-          sideOffset={5}
-          className={clsx('sections-menu-content SelectContent', className)}
+          side="bottom"
+          className={clsx(
+            'sections-menu-content',
+            className,
+            styles.SelectContent,
+          )}
         >
           <Select.ScrollUpButton className="sections-menu-scrollButton">
             <ChevronUp />
@@ -33,7 +37,7 @@ const SectionsMenu = forwardRef(
                 <Select.Item
                   value={docId}
                   key={docId}
-                  className={clsx('sections-menu-item')}
+                  className={clsx('sections-menu-item ')}
                   disabled={disabled}
                 >
                   <Select.ItemText>
