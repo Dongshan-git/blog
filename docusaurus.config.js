@@ -5,14 +5,14 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'Dyte Docs',
-  tagline: 'Real-time audio & video SDKs, ready to launch 🚀',
-  url: 'https://docs.dyte.io',
+  title: 'DS Blog',
+  tagline: 'DS Blog',
+  url: 'https://github.dscode.top',
   baseUrl: '/',
   favicon: '/favicon.ico',
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 };
 
@@ -184,7 +184,7 @@ const docs = [
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
-  editUrl: 'https://github.com/dyte-in/docs/tree/main/',
+  editUrl: 'https://github.com/Dongshan-git/blog/tree/main/',
   showLastUpdateTime: true,
   sidebarCollapsible: true,
   remarkPlugins: [

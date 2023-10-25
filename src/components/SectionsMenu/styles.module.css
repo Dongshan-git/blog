@@ -3,3 +3,6 @@
     max-height: var(--radix-select-content-available-height);
 }
 
+.itemTextColor span {
+    color: var(--docs-color-text)
+}

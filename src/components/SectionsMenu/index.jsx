@@ -41,7 +41,7 @@ const SectionsMenu = forwardRef(
                   disabled={disabled}
                 >
                   <Select.ItemText>
-                    <div className="item-text text-black">
+                    <div className={clsx('item-text', styles.itemTextColor)}>
                       {Icon && <Icon />}
                       <span>{name}</span>
                     </div>

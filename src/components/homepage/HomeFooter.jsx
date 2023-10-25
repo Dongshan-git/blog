@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
 import { Github } from '@styled-icons/boxicons-logos';
 import { XIcon } from '@site/src/icons';
 
@@ -27,27 +26,6 @@ const company = [{ name: 'FAQ', href: '/' }];
 const comparisons = [
   { name: 'Dyte vs Agora', href: 'https://dyte.io/agora-competitor' },
 ];
-
-function Safety({ className }) {
-  return (
-    <div
-      className={clsx(
-        'flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white',
-        className,
-      )}
-    >
-      <div className="flex flex-1 place-items-center justify-center rounded-2xl bg-white px-4 py-6 font-jakarta font-bold text-gray-500">
-        Your Security,
-        <br />
-        Our Priority.
-      </div>
-      <div className="flex flex-1 items-center justify-around px-6">
-        <img src="/img/soc-compliant-1.png" />
-        <img src="/img/vector.png" />
-      </div>
-    </div>
-  );
-}
 
 function Links({ name, links }) {
   return (
