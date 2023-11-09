@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[209],{5968:e=>{e.exports=JSON.parse('{"label":"mobile-core","permalink":"/ios-core/tags/mobile-core","allTagsPath":"/ios-core/tags","count":1,"items":[{"id":"quickstart","title":"Quickstart","description":"Quickstart guide for iOS mobile core.","permalink":"/ios-core/"}],"unlisted":false}')}}]);

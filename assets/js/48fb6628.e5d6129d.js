@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[1440],{1573:e=>{e.exports=JSON.parse('{"label":"setup","permalink":"/rn-core/tags/setup","allTagsPath":"/rn-core/tags","count":1,"items":[{"id":"installation","title":"Installation","description":"Install rn-core.","permalink":"/rn-core/"}],"unlisted":false}')}}]);
