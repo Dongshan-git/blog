@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkds_blog=self.webpackChunkds_blog||[]).push([[9661],{2795:(e,s,r)=>{r.r(s),r.d(s,{default:()=>o});var t=r(959),a=r(5341),l=r(6340),u=r(3822),c=r(3797),n=r(6879);function o(e){return t.createElement(l.FG,{className:(0,a.Z)(u.k.wrapper.docsPages)},t.createElement(n.Z,null,(0,c.H)(e.route.routes)))}}}]);
