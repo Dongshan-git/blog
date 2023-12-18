@@ -11,13 +11,13 @@ import {
 
 export type Section = { docId: string } & (
   | {
-    section: false;
-  }
+      section: false;
+    }
   | {
-    section: string;
-    icon: (props: ComponentProps<'svg'>) => ReactNode;
-    name: string;
-  }
+      section: string;
+      icon: (props: ComponentProps<'svg'>) => ReactNode;
+      name: string;
+    }
 );
 
 const SECTIONS: Section[] = [
@@ -34,7 +34,7 @@ const SECTIONS: Section[] = [
     section: 'web-prebuilt',
   },
 
-  // Plugin SDKs
+  // Plugin Articles
   // - web
   {
     name: 'Javascript',
@@ -43,7 +43,7 @@ const SECTIONS: Section[] = [
     section: 'plugin-sdk',
   },
 
-  // Web SDKs
+  // Web Articles
   // - web-ui-kit
   {
     name: 'Web Components',
@@ -77,7 +77,7 @@ const SECTIONS: Section[] = [
     icon: ReactIcon,
     section: 'web-core-sdk',
   },
-  // Mobile SDKs
+  // Mobile Articles
   {
     name: 'Android Core',
     docId: 'android-core',

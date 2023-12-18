@@ -464,7 +464,7 @@ const config = {
             className: 'guides-top-header',
           },
           {
-            label: 'SDKs',
+            label: 'Articles',
             type: 'dropdown',
             className: 'dyte-dropdown',
             items: [

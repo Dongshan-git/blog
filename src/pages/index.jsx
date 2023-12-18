@@ -7,7 +7,7 @@ import Head from '@docusaurus/Head';
 export default function Homepage() {
   return (
     <Layout
-      description="Real-time audio & video SDKs, ready to launch 🚀"
+      description="Real-time audio & video Articles, ready to launch 🚀"
       wrapperClassName="homepage flex flex-col"
       noFooter
     >
