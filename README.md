@@ -55,6 +55,12 @@ git clone
 
 2. Install NPM packages
 
+```powershell
+# 设置 electron 源
+$ENV:ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/";
+```
+
+
 ```sh
 npm install
 ```
@@ -64,3 +70,4 @@ npm install
 ```sh
 npm start
 ```
+
